@@ -145,12 +145,15 @@ foreign lib {
 	GetAudioDeviceName :: proc(index: c.int, iscapture: bool) -> cstring ---
 	GetAudioDeviceSpec :: proc(index: c.int, iscapture: bool, spec: ^AudioSpec) -> c.int ---
 
+	GetDefaultAudioInfo :: proc(name: ^cstring, spec: ^AudioSpec, iscapture: bool) -> c.int ---
+
 	OpenAudioDevice :: proc(device: cstring,
 	                        iscapture: bool,
 	                        desired: ^AudioSpec,
 	                        obtained: ^AudioSpec,
 	                        allowed_changes: bool) -> AudioDeviceID ---
 }
+#assert(size_of(bool) == size_of(c.int)) // Putting this assert here shouldnt be necessary, but it helps my sanity. The procs above freak me out because for `iscapture`, they use SDL.bool (which should be b32) and not the default Odin bool. The SDL header files for C use an int for `iscapture` and not SDL_bool. Since we ARE using SDL.bool, I want to be doubly sure that doesn't cause issues.
 
 
 

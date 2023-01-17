@@ -4,12 +4,12 @@ Based on `vendor:sdl2` (which is SDL 2.0.16) and updated to 2.26.x
 ## Work In Progress
 Here is a list of all header files from SDL 2.26 that need to be looked at
 
-- [x] begin_code.h
-- [x] close_code.h
+- [x] begin_code.h (C craziness. No need w/ Odin)
+- [x] close_code.h (C craziness. No need w/ Odin)
 - [x] SDL.h
-- [ ] SDL_assert.h
+- [x] SDL_assert.h (C craziness. No need w/ Odin)
 - [x] SDL_atomic.h
-- [ ] SDL_audio.h
+- [x] SDL_audio.h
 - [x] SDL_bits.h
 - [ ] SDL_blendmode.h
 - [x] SDL_clipboard.h
