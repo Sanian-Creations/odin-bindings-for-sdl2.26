@@ -38,8 +38,8 @@ version :: struct {
 }
 
 MAJOR_VERSION   :: 2
-MINOR_VERSION   :: 0
-PATCHLEVEL      :: 16
+MINOR_VERSION   :: 26
+PATCHLEVEL      :: 2
 
 @(default_calling_convention="c", link_prefix="SDL_")
 foreign lib {
@@ -122,6 +122,9 @@ foreign lib {
 	SetClipboardText :: proc(text: cstring) -> c.int ---
 	GetClipboardText :: proc() -> cstring ---
 	HasClipboardText :: proc() -> bool ---
+	SetPrimarySelectionText :: proc(text: cstring) -> c.int ---
+	GetPrimarySelectionText :: proc() -> cstring ---
+	HasPrimarySelectionText :: proc() -> bool ---
 }
 
 
@@ -235,8 +238,8 @@ foreign lib {
 // quit
 
 QuitRequested :: #force_inline proc "c" () -> bool {
-        PumpEvents()
-        return bool(PeepEvents(nil, 0, .PEEKEVENT, .QUIT, .QUIT) > 0)
+	PumpEvents()
+	return bool(PeepEvents(nil, 0, .PEEKEVENT, .QUIT, .QUIT) > 0)
 }
 
 
@@ -251,6 +254,10 @@ SensorType :: enum c.int {
 	UNKNOWN,         /**< Unknown sensor type */
 	ACCEL,           /**< Accelerometer */
 	GYRO,            /**< Gyroscope */
+	ACCEL_L,         /**< Accelerometer for left Joy-Con controller and Wii nunchuk */
+	GYRO_L,          /**< Gyroscope for left Joy-Con controller */
+	ACCEL_R,         /**< Accelerometer for right Joy-Con controller */
+	GYRO_R,          /**< Gyroscope for right Joy-Con controller */
 }
 
 STANDARD_GRAVITY :: 9.80665
@@ -272,6 +279,7 @@ foreign lib {
 	SensorGetNonPortableType       :: proc(sensor: ^Sensor) -> c.int ---
 	SensorGetInstanceID            :: proc(sensor: ^Sensor) -> SensorID ---
 	SensorGetData                  :: proc(sensor: ^Sensor, data: [^]f32, num_values: c.int) -> c.int ---
+	SensorGetDataWithTimestamp     :: proc(sensor: ^Sensor, timestamp: ^u64, data: [^]f32, num_values: c.int) -> c.int ---
 	SensorClose                    :: proc(sensor: ^Sensor) ---
 	SensorUpdate                   :: proc() ---
 }
@@ -294,7 +302,7 @@ WindowShapeModeEnum :: enum c.int {
 	ColorKey,
 }
 
-SDL_SHAPEMODEALPHA :: #force_inline proc "c" (mode: WindowShapeModeEnum) -> bool {
+SHAPEMODEALPHA :: #force_inline proc "c" (mode: WindowShapeModeEnum) -> bool {
 	return bool(mode == .Default || mode == .BinarizeAlpha || mode == .ReverseBinarizeAlpha)
 }
 

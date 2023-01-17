@@ -4,15 +4,15 @@ Based on `vendor:sdl2` (which is SDL 2.0.16) and updated to 2.26.x
 ## Work In Progress
 Here is a list of all header files from SDL 2.26 that need to be looked at
 
-- [ ] begin_code.h
-- [ ] close_code.h
-- [ ] SDL.h
+- [x] begin_code.h
+- [x] close_code.h
+- [x] SDL.h
 - [ ] SDL_assert.h
-- [ ] SDL_atomic.h
+- [x] SDL_atomic.h
 - [ ] SDL_audio.h
-- [ ] SDL_bits.h
+- [x] SDL_bits.h
 - [ ] SDL_blendmode.h
-- [ ] SDL_clipboard.h
+- [x] SDL_clipboard.h
 - [ ] SDL_config.h
 - [ ] SDL_config.h.cmake
 - [ ] SDL_config.h.in
@@ -32,9 +32,9 @@ Here is a list of all header files from SDL 2.26 that need to be looked at
 - [ ] SDL_cpuinfo.h
 - [ ] SDL_egl.h
 - [ ] SDL_endian.h
-- [ ] SDL_error.h
+- [x] SDL_error.h
 - [ ] SDL_events.h
-- [ ] SDL_filesystem.h
+- [x] SDL_filesystem.h
 - [ ] SDL_gamecontroller.h
 - [ ] SDL_gesture.h
 - [ ] SDL_guid.h
@@ -44,13 +44,13 @@ Here is a list of all header files from SDL 2.26 that need to be looked at
 - [ ] SDL_joystick.h
 - [ ] SDL_keyboard.h
 - [ ] SDL_keycode.h
-- [ ] SDL_loadso.h
-- [ ] SDL_locale.h
+- [x] SDL_loadso.h
+- [x] SDL_locale.h
 - [ ] SDL_log.h
 - [ ] SDL_main.h
 - [ ] SDL_messagebox.h
 - [ ] SDL_metal.h
-- [ ] SDL_misc.h
+- [x] SDL_misc.h
 - [ ] SDL_mouse.h
 - [ ] SDL_mutex.h
 - [ ] SDL_name.h
@@ -63,17 +63,17 @@ Here is a list of all header files from SDL 2.26 that need to be looked at
 - [ ] SDL_opengles2_gl2platform.h
 - [ ] SDL_opengles2_khrplatform.h
 - [ ] SDL_pixels.h
-- [ ] SDL_platform.h
-- [ ] SDL_power.h
-- [ ] SDL_quit.h
+- [x] SDL_platform.h
+- [x] SDL_power.h
+- [x] SDL_quit.h
 - [ ] SDL_rect.h
 - [ ] SDL_render.h
 - [ ] SDL_revision.h
 - [ ] SDL_revision.h.cmake
 - [ ] SDL_rwops.h
 - [ ] SDL_scancode.h
-- [ ] SDL_sensor.h
-- [ ] SDL_shape.h
+- [x] SDL_sensor.h
+- [x] SDL_shape.h
 - [ ] SDL_stdinc.h
 - [ ] SDL_surface.h
 - [ ] SDL_system.h
