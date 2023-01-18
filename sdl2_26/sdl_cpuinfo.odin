@@ -35,7 +35,9 @@ foreign lib {
 	HasAVX512F          :: proc() -> bool  ---
 	HasARMSIMD          :: proc() -> bool  ---
 	HasNEON             :: proc() -> bool  ---
-
+	HasLSX              :: proc() -> bool  ---
+	HasLASX             :: proc() -> bool  ---
+	
 	GetSystemRAM        :: proc() -> c.int ---
 
 	SIMDGetAlignment    :: proc() -> c.size_t ---

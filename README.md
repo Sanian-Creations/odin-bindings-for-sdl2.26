@@ -11,25 +11,24 @@ Here is a list of all header files from SDL 2.26 that need to be looked at
 - [x] SDL_atomic.h
 - [x] SDL_audio.h
 - [x] SDL_bits.h
-- [ ] SDL_blendmode.h
+- [x] SDL_blendmode.h
 - [x] SDL_clipboard.h
-- [ ] SDL_config.h
-- [ ] SDL_config.h.cmake
-- [ ] SDL_config.h.in
-- [ ] SDL_config_android.h
-- [ ] SDL_config_emscripten.h
-- [ ] SDL_config_iphoneos.h
-- [ ] SDL_config_macosx.h
-- [ ] SDL_config_minimal.h
-- [ ] SDL_config_ngage.h
-- [ ] SDL_config_os2.h
-- [ ] SDL_config_pandora.h
-- [ ] SDL_config_windows.h
-- [ ] SDL_config_wingdk.h
-- [ ] SDL_config_winrt.h
-- [ ] SDL_config_xbox.h
-- [ ] SDL_copying.h
-- [ ] SDL_cpuinfo.h
+- [x] SDL_config.h (All config headers are C craziness. No need w/ Odin)
+- [x] SDL_config.h.in
+- [x] SDL_config_android.h
+- [x] SDL_config_emscripten.h
+- [x] SDL_config_iphoneos.h
+- [x] SDL_config_macosx.h
+- [x] SDL_config_minimal.h
+- [x] SDL_config_ngage.h
+- [x] SDL_config_os2.h
+- [x] SDL_config_pandora.h
+- [x] SDL_config_windows.h
+- [x] SDL_config_wingdk.h
+- [x] SDL_config_winrt.h
+- [x] SDL_config_xbox.h
+- [x] SDL_copying.h (literally just the copyright disclaimer thats already at the top of every file)
+- [x] SDL_cpuinfo.h
 - [ ] SDL_egl.h
 - [ ] SDL_endian.h
 - [x] SDL_error.h
