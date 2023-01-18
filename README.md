@@ -14,19 +14,19 @@ Here is a list of all header files from SDL 2.26 that need to be looked at
 - [x] SDL_blendmode.h
 - [x] SDL_clipboard.h
 - [x] SDL_config.h (All config headers are C craziness. No need w/ Odin)
-- [x] SDL_config.h.in
-- [x] SDL_config_android.h
-- [x] SDL_config_emscripten.h
-- [x] SDL_config_iphoneos.h
-- [x] SDL_config_macosx.h
-- [x] SDL_config_minimal.h
-- [x] SDL_config_ngage.h
-- [x] SDL_config_os2.h
-- [x] SDL_config_pandora.h
-- [x] SDL_config_windows.h
-- [x] SDL_config_wingdk.h
-- [x] SDL_config_winrt.h
-- [x] SDL_config_xbox.h
+  - [x] SDL_config.h.in
+  - [x] SDL_config_android.h
+  - [x] SDL_config_emscripten.h
+  - [x] SDL_config_iphoneos.h
+  - [x] SDL_config_macosx.h
+  - [x] SDL_config_minimal.h
+  - [x] SDL_config_ngage.h
+  - [x] SDL_config_os2.h
+  - [x] SDL_config_pandora.h
+  - [x] SDL_config_windows.h
+  - [x] SDL_config_wingdk.h
+  - [x] SDL_config_winrt.h
+  - [x] SDL_config_xbox.h
 - [x] SDL_copying.h (literally just the copyright disclaimer thats already at the top of every file)
 - [x] SDL_cpuinfo.h
 - [ ] SDL_egl.h
@@ -54,13 +54,13 @@ Here is a list of all header files from SDL 2.26 that need to be looked at
 - [ ] SDL_mutex.h
 - [ ] SDL_name.h
 - [ ] SDL_opengl.h
-- [ ] SDL_opengl_glext.h
-- [ ] SDL_opengles.h
-- [ ] SDL_opengles2.h
-- [ ] SDL_opengles2_gl2.h
-- [ ] SDL_opengles2_gl2ext.h
-- [ ] SDL_opengles2_gl2platform.h
-- [ ] SDL_opengles2_khrplatform.h
+  - [ ] SDL_opengl_glext.h
+  - [ ] SDL_opengles.h
+  - [ ] SDL_opengles2.h
+  - [ ] SDL_opengles2_gl2.h
+  - [ ] SDL_opengles2_gl2ext.h
+  - [ ] SDL_opengles2_gl2platform.h
+  - [ ] SDL_opengles2_khrplatform.h
 - [ ] SDL_pixels.h
 - [x] SDL_platform.h
 - [x] SDL_power.h
@@ -68,7 +68,6 @@ Here is a list of all header files from SDL 2.26 that need to be looked at
 - [ ] SDL_rect.h
 - [ ] SDL_render.h
 - [ ] SDL_revision.h
-- [ ] SDL_revision.h.cmake
 - [ ] SDL_rwops.h
 - [ ] SDL_scancode.h
 - [x] SDL_sensor.h
@@ -78,18 +77,18 @@ Here is a list of all header files from SDL 2.26 that need to be looked at
 - [ ] SDL_system.h
 - [ ] SDL_syswm.h
 - [ ] SDL_test.h
-- [ ] SDL_test_assert.h
-- [ ] SDL_test_common.h
-- [ ] SDL_test_compare.h
-- [ ] SDL_test_crc32.h
-- [ ] SDL_test_font.h
-- [ ] SDL_test_fuzzer.h
-- [ ] SDL_test_harness.h
-- [ ] SDL_test_images.h
-- [ ] SDL_test_log.h
-- [ ] SDL_test_md5.h
-- [ ] SDL_test_memory.h
-- [ ] SDL_test_random.h
+  - [ ] SDL_test_assert.h
+  - [ ] SDL_test_common.h
+  - [ ] SDL_test_compare.h
+  - [ ] SDL_test_crc32.h
+  - [ ] SDL_test_font.h
+  - [ ] SDL_test_fuzzer.h
+  - [ ] SDL_test_harness.h
+  - [ ] SDL_test_images.h
+  - [ ] SDL_test_log.h
+  - [ ] SDL_test_md5.h
+  - [ ] SDL_test_memory.h
+  - [ ] SDL_test_random.h
 - [ ] SDL_thread.h
 - [ ] SDL_timer.h
 - [ ] SDL_touch.h
