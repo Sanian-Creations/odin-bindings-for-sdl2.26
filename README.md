@@ -29,10 +29,10 @@ Here is a list of all header files from SDL 2.26 that need to be looked at
   - [x] SDL_config_xbox.h
 - [x] SDL_copying.h (literally just the copyright disclaimer thats already at the top of every file)
 - [x] SDL_cpuinfo.h
-- [ ] SDL_egl.h
-- [ ] SDL_endian.h
+- [x] SDL_egl.h (C craziness. No need w/ Odin)
+- [x] SDL_endian.h (stuff that's in core:encoding/endian)
 - [x] SDL_error.h
-- [ ] SDL_events.h
+- [x] SDL_events.h
 - [x] SDL_filesystem.h
 - [ ] SDL_gamecontroller.h
 - [ ] SDL_gesture.h
