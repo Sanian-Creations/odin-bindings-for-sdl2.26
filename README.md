@@ -34,7 +34,7 @@ Here is a list of all header files from SDL 2.26 that need to be looked at
 - [x] SDL_error.h
 - [x] SDL_events.h
 - [x] SDL_filesystem.h
-- [ ] SDL_gamecontroller.h
+- [x] SDL_gamecontroller.h
 - [ ] SDL_gesture.h
 - [ ] SDL_guid.h
 - [ ] SDL_haptic.h
