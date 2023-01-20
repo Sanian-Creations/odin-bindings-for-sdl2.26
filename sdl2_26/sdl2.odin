@@ -182,6 +182,19 @@ foreign lib {
 }
 
 
+// guid
+
+GUID :: struct {
+	data: [16]u8,
+}
+
+@(default_calling_convention="c", link_prefix="SDL_")
+foreign lib {
+	GUIDToString   :: proc(guid: GUID, pszGUID: [^]u8, cbGUID: c.int) ---
+	GUIDFromString :: proc(pchGUID: cstring) -> GUID ---
+}
+
+
 // loadso
 
 @(default_calling_convention="c", link_prefix="SDL_")
