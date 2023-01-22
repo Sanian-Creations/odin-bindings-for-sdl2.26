@@ -37,8 +37,8 @@ Here is a list of all header files from SDL 2.26 that need to be looked at
 - [x] SDL_gamecontroller.h
 - [x] SDL_gesture.h
 - [x] SDL_guid.h
-- [ ] SDL_haptic.h
-- [ ] SDL_hidapi.h
+- [x] SDL_haptic.h
+- [x] SDL_hidapi.h
 - [ ] SDL_hints.h
 - [ ] SDL_joystick.h
 - [ ] SDL_keyboard.h
