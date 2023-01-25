@@ -40,7 +40,7 @@ Here is a list of all header files from SDL 2.26 that need to be looked at
 - [x] SDL_haptic.h
 - [x] SDL_hidapi.h
 - [x] SDL_hints.h
-- [ ] SDL_joystick.h
+- [x] SDL_joystick.h
 - [ ] SDL_keyboard.h
 - [ ] SDL_keycode.h
 - [x] SDL_loadso.h
