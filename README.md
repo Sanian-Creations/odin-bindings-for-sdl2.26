@@ -42,7 +42,7 @@ Here is a list of all header files from SDL 2.26 that need to be looked at
 - [x] SDL_hints.h
 - [x] SDL_joystick.h
 - [x] SDL_keyboard.h
-- [ ] SDL_keycode.h
+- [x] SDL_keycode.h
 - [x] SDL_loadso.h
 - [x] SDL_locale.h
 - [ ] SDL_log.h
@@ -69,7 +69,7 @@ Here is a list of all header files from SDL 2.26 that need to be looked at
 - [ ] SDL_render.h
 - [ ] SDL_revision.h
 - [ ] SDL_rwops.h
-- [ ] SDL_scancode.h
+- [x] SDL_scancode.h
 - [x] SDL_sensor.h
 - [x] SDL_shape.h
 - [ ] SDL_stdinc.h
