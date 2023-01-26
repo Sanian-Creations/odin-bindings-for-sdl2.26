@@ -45,15 +45,15 @@ Here is a list of all header files from SDL 2.26 that need to be looked at
 - [x] SDL_keycode.h
 - [x] SDL_loadso.h
 - [x] SDL_locale.h
-- [ ] SDL_log.h
-- [ ] SDL_main.h
-- [ ] SDL_messagebox.h
-- [ ] SDL_metal.h
+- [x] SDL_log.h
+- [ ] SDL_main.h (none of the things in here are in the original odin bindings, so I'll skip the things that got added here too for now)
+- [x] SDL_messagebox.h
+- [x] SDL_metal.h
 - [x] SDL_misc.h
-- [ ] SDL_mouse.h
-- [ ] SDL_mutex.h
-- [ ] SDL_name.h
-- [ ] SDL_opengl.h
+- [x] SDL_mouse.h
+- [x] SDL_mutex.h
+- [x] SDL_name.h
+- [ ] SDL_opengl.h (most of this stuff is in vendor:OpenGL, though not all of it. I'm skipping this because the original odin bindings also skipped it)
   - [ ] SDL_opengl_glext.h
   - [ ] SDL_opengles.h
   - [ ] SDL_opengles2.h
@@ -61,7 +61,7 @@ Here is a list of all header files from SDL 2.26 that need to be looked at
   - [ ] SDL_opengles2_gl2ext.h
   - [ ] SDL_opengles2_gl2platform.h
   - [ ] SDL_opengles2_khrplatform.h
-- [ ] SDL_pixels.h
+- [x] SDL_pixels.h
 - [x] SDL_platform.h
 - [x] SDL_power.h
 - [x] SDL_quit.h
