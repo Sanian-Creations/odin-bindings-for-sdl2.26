@@ -18,6 +18,8 @@ FOURCC :: #force_inline proc "c" (A, B, C, D: u8) -> u32 {
 	return u32(A) << 0 | u32(B) << 8 | u32(C) << 16 | u32(D) << 24
 }
 
+// This value is used in (at least) sdl_rect.odin.
+FLT_EPSILON :: f32(1.1920928955078125e-07) /* 0x0.000002p0 */
 
 stack_alloc :: proc "c" ($T: typeid, #any_int count: int) -> ^T {
 	return (^T)(intrinsics.alloca(size_of(T)*count))

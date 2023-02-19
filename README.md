@@ -1,7 +1,15 @@
 # SDL 2.26 bindings for Odin
 Based on `vendor:sdl2` (which is SDL 2.0.16) and updated to 2.26.x 
 
-## Work In Progress
+## How to work on this
+Go to this diff: https://github.com/libsdl-org/SDL/compare/release-2.0.16...release-2.26.2?diff=split
+
+run this to collapse all diffs (may take a few seconds):
+`document.querySelectorAll('button[aria-label="Toggle diff contents"][aria-expanded=true]').forEach(b=>b.click())`
+
+Search for all files with path "include/", these are the files that need checking.
+
+## Progress
 Here is a list of all header files from SDL 2.26 that need to be looked at
 
 - [x] begin_code.h (C craziness. No need w/ Odin)
@@ -65,7 +73,7 @@ Here is a list of all header files from SDL 2.26 that need to be looked at
 - [x] SDL_platform.h
 - [x] SDL_power.h
 - [x] SDL_quit.h
-- [ ] SDL_rect.h
+- [x] SDL_rect.h
 - [ ] SDL_render.h
 - [ ] SDL_revision.h
 - [ ] SDL_rwops.h
