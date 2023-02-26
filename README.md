@@ -74,7 +74,7 @@ Here is a list of all header files from SDL 2.26 that need to be looked at
 - [x] SDL_power.h
 - [x] SDL_quit.h
 - [x] SDL_rect.h
-- [ ] SDL_render.h
+- [x] SDL_render.h
 - [ ] SDL_revision.h
 - [ ] SDL_rwops.h
 - [x] SDL_scancode.h
