@@ -43,6 +43,11 @@ foreign lib {
 	realloc  :: proc(mem: rawptr, size: c.size_t) -> rawptr ---
 	free     :: proc(mem: rawptr) ---
 
+	GetOriginalMemoryFunctions :: proc(malloc_func:  ^malloc_func,
+                                       calloc_func:  ^calloc_func,
+                                       realloc_func: ^realloc_func,
+                                       free_func:    ^free_func) ---
+	
 	GetMemoryFunctions :: proc(malloc_func:  ^malloc_func,
 	                           calloc_func:  ^calloc_func,
 	                           realloc_func: ^realloc_func,
@@ -65,6 +70,12 @@ foreign lib {
 
 @(default_calling_convention="c", link_prefix="SDL_")
 foreign lib {
+	qsort   :: proc(base: rawptr,      nmemb, size: c.size_t, compare: proc(rawptr, rawptr) -> c.int) ---
+	bsearch :: proc(key, base: rawptr, nmemb, size: c.size_t, compare: proc(rawptr, rawptr) -> c.int) -> rawptr ---
+}
+
+@(default_calling_convention="c", link_prefix="SDL_")
+foreign lib {
 	isalpha  :: proc(x: rune) -> bool ---
 	isalnum  :: proc(x: rune) -> bool ---
 	isblank  :: proc(x: rune) -> bool ---
@@ -80,6 +91,7 @@ foreign lib {
 	toupper  :: proc(x: rune) -> bool ---
 	tolower  :: proc(x: rune) -> bool ---
 
+	crc16 :: proc(crc: u16, data: rawptr, len: c.size_t) -> u16 ---
 	crc32 :: proc(crc: u32, data: rawptr, len: c.size_t) -> u32 ---
 }
 
@@ -94,8 +106,8 @@ foreign lib {
 	asinf     :: proc(x: f32)           -> f32 ---
 	atan      :: proc(x: f64)           -> f64 ---
 	atanf     :: proc(x: f32)           -> f32 ---
-	atan2     :: proc(x, y: f64)        -> f64 ---
-	atan2f    :: proc(x, y: f32)        -> f32 ---
+	atan2     :: proc(y, x: f64)        -> f64 ---
+	atan2f    :: proc(y, x: f32)        -> f32 ---
 	ceil      :: proc(x: f64)           -> f64 ---
 	ceilf     :: proc(x: f32)           -> f32 ---
 	copysign  :: proc(x, y: f64)        -> f64 ---
@@ -163,4 +175,8 @@ iconv_utf8_ucs2 :: proc "c" (s: string) -> [^]u16 {
 iconv_utf8_utf32 :: iconv_utf8_ucs4
 iconv_utf8_ucs4 :: proc "c" (s: string) -> [^]rune {
 	return cast([^]rune)iconv_string("UCS-4-INTERNAL", "UTF-8", cstring(raw_data(s)), len(s)+1)
+}
+
+iconv_wchar_utf8 :: proc "c" (s: []c.wchar_t) -> cstring {
+    return cast(cstring) iconv_string("UTF-8", "WCHAR_T", cast(cstring) cast(rawptr) raw_data(s), (len(s)+1) * size_of(c.wchar_t))
 }
