@@ -102,5 +102,5 @@ Here is a list of all header files from SDL 2.26 that need to be looked at
 - [ ] SDL_touch.h
 - [ ] SDL_types.h
 - [ ] SDL_version.h
-- [ ] SDL_video.h
+- [x] SDL_video.h
 - [ ] SDL_vulkan.h
