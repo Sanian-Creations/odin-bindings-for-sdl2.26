@@ -98,7 +98,7 @@ Here is a list of all header files from SDL 2.26 that need to be looked at
   - [ ] SDL_test_memory.h
   - [ ] SDL_test_random.h
 - [ ] SDL_thread.h
-- [ ] SDL_timer.h
+- [x] SDL_timer.h
 - [ ] SDL_touch.h
 - [ ] SDL_types.h
 - [ ] SDL_version.h
